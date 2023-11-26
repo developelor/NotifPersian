@@ -1,4 +1,4 @@
-﻿namespace NotifPersian
+﻿namespace Notification
 {
     partial class frmView
     {

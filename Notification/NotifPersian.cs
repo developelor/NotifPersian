@@ -1,11 +1,16 @@
 ﻿using System.Media;
 using System.Windows.Forms;
+using static Notification.NotifPersian;
 
-namespace NotifPersian
+namespace Notification
 {
     public class NotifPersian
     {
-
+        private readonly NotifPersian notifier;
+        public NotifPersian()
+        {
+            notifier = new NotifPersian();
+        }
         public static DialogResult Show(string Message)
         {
             frmView msgBox = new frmView
@@ -13,7 +18,7 @@ namespace NotifPersian
                 Text = "اطلاعات"
             };
             msgBox.Label.Text = Message;
-            msgBox.icon.Image = global::NotifPersian.Properties.Resources.info;
+            msgBox.icon.Image = global::Notification.Properties.Resources.info;
             msgBox.OKPanel.Tag = "OK";
             msgBox.OKPanel.Left = 13;
             msgBox.OKPanel.Top = 88;
@@ -29,7 +34,7 @@ namespace NotifPersian
                 Text = Title
             };
             msgBox.Label.Text = Message;
-            msgBox.icon.Image = global::NotifPersian.Properties.Resources.info;
+            msgBox.icon.Image = global::Notification.Properties.Resources.info;
             msgBox.OKPanel.Tag = "OK";
             msgBox.OKPanel.Left = 13;
             msgBox.OKPanel.Top = 88;
@@ -45,7 +50,7 @@ namespace NotifPersian
                 Text = Title
             };
             msgBox.Label.Text = Message;
-            msgBox.icon.Image = global::NotifPersian.Properties.Resources.info;
+            msgBox.icon.Image = global::Notification.Properties.Resources.info;
             if (buttons == NotifPersianButtons.OK)
             {
                 msgBox.OKPanel.Tag = "OK";
@@ -102,13 +107,13 @@ namespace NotifPersian
             msgBox.Label.Text = Message;
 
             if (icon == NotifPersianIcons.Error)
-                msgBox.icon.Image = global::NotifPersian.Properties.Resources.error;
+                msgBox.icon.Image = global::Notification.Properties.Resources.error;
             else if (icon == NotifPersianIcons.Information)
-                msgBox.icon.Image = global::NotifPersian.Properties.Resources.info;
+                msgBox.icon.Image = global::Notification.Properties.Resources.info;
             else if (icon == NotifPersianIcons.Question)
-                msgBox.icon.Image = global::NotifPersian.Properties.Resources.question;
+                msgBox.icon.Image = global::Notification.Properties.Resources.question;
             else if (icon == NotifPersianIcons.Warning)
-                msgBox.icon.Image = global::NotifPersian.Properties.Resources.warning;
+                msgBox.icon.Image = global::Notification.Properties.Resources.warning;
 
 
             if (buttons == NotifPersianButtons.OK)

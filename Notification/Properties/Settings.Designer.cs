@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NotifPersian.Properties {
+namespace Notification.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
